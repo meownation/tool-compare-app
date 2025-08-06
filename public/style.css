@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+.compare {
+  display: flex;
+  gap: 30px;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex: 1;
+}
+.card h2 {
+  margin-top: 0;
+}
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  background: #007acc;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}

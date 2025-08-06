@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title><%= a.name %> vs <%= b.name %> – AI Tool Comparison</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1><%= a.name %> vs <%= b.name %></h1>
+  <div class="compare">
+    <div class="card">
+      <h2><%= a.name %></h2>
+      <p><%= a.description %></p>
+      <ul>
+        <% a.features.forEach(f => { %><li><%= f %></li><% }) %>
+      </ul>
+      <p>Price: <%= a.pricing %></p>
+      <a href="/out/<%= a.name.toLowerCase() %>" target="_blank">Try <%= a.name %></a>
+    </div>
+    <div class="card">
+      <h2><%= b.name %></h2>
+      <p><%= b.description %></p>
+      <ul>
+        <% b.features.forEach(f => { %><li><%= f %></li><% }) %>
+      </ul>
+      <p>Price: <%= b.pricing %></p>
+      <a href="/out/<%= b.name.toLowerCase() %>" target="_blank">Try <%= b.name %></a>
+    </div>
+  </div>
+</body>
+</html>

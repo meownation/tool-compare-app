@@ -1,0 +1,16 @@
+{
+  "chatgpt": {
+    "name": "ChatGPT",
+    "description": "OpenAI's conversational AI assistant.",
+    "features": ["GPT-4", "Chat History", "Web Access"],
+    "pricing": "Free tier + $20/mo for GPT-4",
+    "affiliate": "https://openai.com"
+  },
+  "claude": {
+    "name": "Claude",
+    "description": "Anthropic's AI assistant, good for long context.",
+    "features": ["100k context", "Fast", "Secure"],
+    "pricing": "Free + Pro $20/mo",
+    "affiliate": "https://www.anthropic.com"
+  }
+}
