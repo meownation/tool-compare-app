@@ -2,6 +2,20 @@ const express = require("express");
 const router = express.Router();
 const tools = require("../data/tools.json");
 
+// Unified route for root "/compare"
+router.get("/", (req, res) => {
+  const tool1 = req.query.tool1?.toLowerCase();
+  const tool2 = req.query.tool2?.toLowerCase();
+
+  if (tool1 && tool2) {
+    // Redirect to SEO-friendly route
+    return res.redirect(`/compare/${tool1}-vs-${tool2}`);
+  }
+
+  // No query params? Render tool selector page
+  res.render("compare-select", { tools });
+});
+
 // SEO-friendly compare route: /compare/chatgpt-vs-claude
 router.get("/:tools", (req, res) => {
   const [tool1, tool2] = req.params.tools.toLowerCase().split("-vs-");
@@ -14,18 +28,6 @@ router.get("/:tools", (req, res) => {
     a: tools[tool1],
     b: tools[tool2]
   });
-});
-
-// Redirect old query param style to SEO-friendly URLs
-router.get("/", (req, res) => {
-  const tool1 = req.query.tool1?.toLowerCase();
-  const tool2 = req.query.tool2?.toLowerCase();
-
-  if (tool1 && tool2) {
-    res.redirect(`/compare/${tool1}-vs-${tool2}`);
-  } else {
-    res.status(400).send("Please provide tool1 and tool2 query parameters.");
-  }
 });
 
 module.exports = router;
