@@ -12,5 +12,68 @@
     "features": ["100k context", "Fast", "Secure"],
     "pricing": "Free + Pro $20/mo",
     "affiliate": "https://www.anthropic.com"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "description": "Google's AI for search and productivity tasks.",
+    "features": ["Bard", "Multimodal", "Google Docs Integration"],
+    "pricing": "Free + Gemini Advanced in Google One plans",
+    "affiliate": "https://gemini.google.com"
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "description": "AI-powered search engine with citations.",
+    "features": ["Real-time Search", "Sources", "Follow-up Questions"],
+    "pricing": "Free + Pro $20/mo",
+    "affiliate": "https://www.perplexity.ai"
+  },
+  "copilot": {
+    "name": "GitHub Copilot",
+    "description": "AI coding assistant developed by GitHub & OpenAI.",
+    "features": ["Code Autocomplete", "Docs Suggestions", "IDE Integration"],
+    "pricing": "$10/mo for individuals, $19/mo for businesses",
+    "affiliate": "https://github.com/features/copilot"
+  },
+  "reka": {
+    "name": "Reka AI",
+    "description": "New research lab offering advanced language models.",
+    "features": ["Multimodal", "Open Weights", "High Accuracy"],
+    "pricing": "Free trial available",
+    "affiliate": "https://reka.ai"
+  },
+  "mistral": {
+    "name": "Mistral",
+    "description": "Open-weight language models known for performance.",
+    "features": ["Fast", "Open Source", "Streaming"],
+    "pricing": "Free",
+    "affiliate": "https://mistral.ai"
+  },
+  "llama": {
+    "name": "LLaMA",
+    "description": "Meta’s open large language model series.",
+    "features": ["Open Weight", "High Efficiency", "Long Context"],
+    "pricing": "Free (research license)",
+    "affiliate": "https://ai.meta.com/llama"
+  },
+  "pi": {
+    "name": "Pi AI",
+    "description": "Personal AI chatbot with emotional intelligence.",
+    "features": ["Voice Chat", "Empathetic Responses", "Always-On"],
+    "pricing": "Free",
+    "affiliate": "https://heypi.com"
+  },
+  "groq": {
+    "name": "Groq Chat",
+    "description": "Extremely fast inference for open models like Mixtral.",
+    "features": ["Ultra Fast", "Open Models", "Live Demos"],
+    "pricing": "Free",
+    "affiliate": "https://groq.com"
+  },
+  "jan": {
+    "name": "Jan",
+    "description": "Open-source, locally run AI assistant.",
+    "features": ["Privacy Focused", "Open Source", "Offline"],
+    "pricing": "Free",
+    "affiliate": "https://github.com/janhq/jan"
   }
 }
