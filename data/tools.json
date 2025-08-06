@@ -575,5 +575,226 @@
     },
     "external_reviews": [],
     "competitors": ["Mycroft AI", "Local LLM setups"]
+  },
+
+  "bard": {
+    "name": "Google Bard",
+    "description": "Google’s conversational AI based on LaMDA.",
+    "founder": "Google",
+    "launch_year": 2023,
+    "target_audience": ["General users", "Students", "Developers"],
+    "features": ["Conversational AI", "Google Search integration", "Multimodal support (beta)"],
+    "pricing": {
+      "free_tier": "Free with Google account",
+      "paid_tier": "N/A",
+      "enterprise": "Included in Google Workspace"
+    },
+    "affiliate": "https://bard.google.com",
+    "platforms": ["Web", "Mobile"],
+    "integrations": ["Google Search", "Google Workspace"],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "Google policies apply"
+    },
+    "support": {
+      "channels": ["Google Support", "Documentation"],
+      "quality": "Extensive official support"
+    },
+    "community_size": "Millions of users worldwide",
+    "performance": {
+      "response_time": "Typically <2 seconds",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "General Q&A",
+      "Content generation",
+      "Educational assistance",
+      "Search enhancements"
+    ],
+    "limitations": [
+      "API not available",
+      "Limited offline support"
+    ],
+    "pros_cons": {
+      "pros": ["Strong Google integration", "Free to use"],
+      "cons": ["No API access", "Still evolving capabilities"]
+    },
+    "external_reviews": [
+      {
+        "title": "The Verge Google Bard Review",
+        "url": "https://www.theverge.com/2023/2/6/google-bard-review"
+      }
+    ],
+    "competitors": ["ChatGPT", "Claude", "Gemini"]
+  },
+
+  "bing_ai": {
+    "name": "Bing AI",
+    "description": "Microsoft's AI-powered search assistant integrated with Bing.",
+    "founder": "Microsoft",
+    "launch_year": 2023,
+    "target_audience": ["General users", "Students", "Businesses"],
+    "features": ["Search integration", "Chat-based interface", "Image generation (via DALL·E)"],
+    "pricing": {
+      "free_tier": "Free with Microsoft account",
+      "paid_tier": "N/A",
+      "enterprise": "Included with Microsoft 365"
+    },
+    "affiliate": "https://bing.com/ai",
+    "platforms": ["Web", "Windows", "Mobile"],
+    "integrations": ["Microsoft Edge", "Microsoft 365"],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "Microsoft policies apply"
+    },
+    "support": {
+      "channels": ["Microsoft Support", "Documentation"],
+      "quality": "Enterprise-grade"
+    },
+    "community_size": "Large user base",
+    "performance": {
+      "response_time": "Usually under 2 seconds",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "Enhanced web search",
+      "Conversational answers",
+      "Content generation",
+      "Image creation"
+    ],
+    "limitations": [
+      "No standalone API",
+      "Limited to Bing ecosystem"
+    ],
+    "pros_cons": {
+      "pros": ["Strong Microsoft integration", "Free to use"],
+      "cons": ["API not publicly available", "Dependent on Bing search"]
+    },
+    "external_reviews": [
+      {
+        "title": "TechCrunch Bing AI Review",
+        "url": "https://techcrunch.com/2023/02/07/microsoft-bing-ai-review/"
+      }
+    ],
+    "competitors": ["ChatGPT", "Google Bard", "Claude"]
+  },
+
+  "huggingface_hub": {
+    "name": "Hugging Face",
+    "description": "Open AI community and model hub with hosted APIs.",
+    "founder": "Hugging Face Inc.",
+    "launch_year": 2016,
+    "target_audience": ["Researchers", "Developers", "Data Scientists"],
+    "features": ["Model hosting", "Transformers library", "Community models", "API access"],
+    "pricing": {
+      "free_tier": "Free tier with rate limits",
+      "paid_tier": "Starting at $9/month",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://huggingface.co",
+    "platforms": ["Web", "API", "CLI"],
+    "integrations": ["Python", "Node.js", "Java"],
+    "api": {
+      "availability": true,
+      "rate_limits": "Based on plan",
+      "documentation": "https://huggingface.co/docs"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "Per user agreements"
+    },
+    "support": {
+      "channels": ["Email", "Community Forum", "Documentation"],
+      "quality": "Active community and official support"
+    },
+    "community_size": "Hundreds of thousands of developers",
+    "performance": {
+      "response_time": "Varies by model",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "Custom model hosting",
+      "Experimentation",
+      "Fine-tuning",
+      "Research and production apps"
+    ],
+    "limitations": [
+      "Some models not production ready",
+      "Rate limits on free tier"
+    ],
+    "pros_cons": {
+      "pros": ["Vast community models", "Easy API access"],
+      "cons": ["Varied model quality", "Some setup complexity"]
+    },
+    "external_reviews": [
+      {
+        "title": "AI News Hugging Face Review",
+        "url": "https://ainews.com/review-hugging-face"
+      }
+    ],
+    "competitors": ["OpenAI API", "Cohere", "AI21 Labs"]
+  },
+
+  "ai21_labs": {
+    "name": "AI21 Labs",
+    "description": "AI models focused on natural language understanding.",
+    "founder": "AI21 Labs",
+    "launch_year": 2019,
+    "target_audience": ["Developers", "Enterprises"],
+    "features": ["Large language models", "Text generation", "Paraphrasing", "Semantic search"],
+    "pricing": {
+      "free_tier": "Limited free tier",
+      "paid_tier": "Starts at $19/month",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://www.ai21.com",
+    "platforms": ["API", "Web"],
+    "integrations": ["Python", "Node.js"],
+    "api": {
+      "availability": true,
+      "rate_limits": "Depends on plan",
+      "documentation": "https://docs.ai21.com"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "Compliant with policies"
+    },
+    "support": {
+      "channels": ["Email", "Documentation"],
+      "quality": "Good official support"
+    },
+    "community_size": "Growing user base",
+    "performance": {
+      "response_time": "1-3 seconds",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "Text generation",
+      "Semantic search",
+      "Content creation",
+      "Chatbots"
+    ],
+    "limitations": [
+      "Limited ecosystem compared to OpenAI",
+      "Subscription needed for best features"
+    ],
+    "pros_cons": {
+      "pros": ["Strong NLU", "Good API"],
+      "cons": ["Smaller ecosystem", "Subscription cost"]
+    },
+    "external_reviews": [],
+    "competitors": ["OpenAI", "Cohere", "Hugging Face"]
   }
 }

@@ -1,39 +1,364 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title><%= a.name %> vs <%= b.name %> – AI Tool Comparison</title>
   <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Additional style for dark mode toggle button */
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 1000;
+    }
+    .toggle-dark:hover {
+      background: #005f99;
+    }
+  </style>
 </head>
 <body>
-  <a href="/compare" class="back-button">
-    ← Back to Tool Selection
-  </a>
+  <button class="toggle-dark" id="toggleDark">Toggle Dark Mode</button>
+
+  <a href="/compare" class="back-button">← Back to Tool Selection</a>
 
   <h1><%= a.name %> vs <%= b.name %></h1>
-  <div class="compare">
-    <div class="card">
-      <h2><%= a.name %></h2>
-      <p><%= a.description %></p>
-      <ul>
-        <% a.features.forEach(f => { %><li><%= f %></li><% }) %>
-      </ul>
-      <p><strong>Price:</strong> <%= a.pricing %></p>
-      <form action="/out/<%= a.name.toLowerCase() %>" method="get" target="_blank">
-        <button type="submit">Try <%= a.name %></button>
-      </form>
-    </div>
-    <div class="card">
-      <h2><%= b.name %></h2>
-      <p><%= b.description %></p>
-      <ul>
-        <% b.features.forEach(f => { %><li><%= f %></li><% }) %>
-      </ul>
-      <p><strong>Price:</strong> <%= b.pricing %></p>
-      <form action="/out/<%= b.name.toLowerCase() %>" method="get" target="_blank">
-        <button type="submit">Try <%= b.name %></button>
-      </form>
-    </div>
-  </div>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th><%= a.name %></th>
+        <th><%= b.name %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Description</td>
+        <td><%= a.description %></td>
+        <td><%= b.description %></td>
+      </tr>
+      <tr>
+        <td>Founder</td>
+        <td><%= a.founder || 'N/A' %></td>
+        <td><%= b.founder || 'N/A' %></td>
+      </tr>
+      <tr>
+        <td>Launch Year</td>
+        <td><%= a.launch_year || 'N/A' %></td>
+        <td><%= b.launch_year || 'N/A' %></td>
+      </tr>
+      <tr>
+        <td>Target Audience</td>
+        <td>
+          <ul>
+            <% (a.target_audience || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.target_audience || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Features</td>
+        <td>
+          <ul>
+            <% (a.features || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.features || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Pricing</td>
+        <td>
+          <% if (typeof a.pricing === 'object') { %>
+            <ul>
+              <% Object.entries(a.pricing).forEach(([key, value]) => { %>
+                <li><strong><%= key.replace(/_/g, ' ') %>:</strong> <%= value %></li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <%= a.pricing || 'N/A' %>
+          <% } %>
+        </td>
+        <td>
+          <% if (typeof b.pricing === 'object') { %>
+            <ul>
+              <% Object.entries(b.pricing).forEach(([key, value]) => { %>
+                <li><strong><%= key.replace(/_/g, ' ') %>:</strong> <%= value %></li>
+              <% }) %>
+            </ul>
+          <% } else { %>
+            <%= b.pricing || 'N/A' %>
+          <% } %>
+        </td>
+      </tr>
+      <tr>
+        <td>Platforms</td>
+        <td>
+          <ul>
+            <% (a.platforms || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.platforms || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Integrations</td>
+        <td>
+          <ul>
+            <% (a.integrations || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.integrations || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>API Availability</td>
+        <td><%= a.api?.availability ? 'Yes' : 'No' %></td>
+        <td><%= b.api?.availability ? 'Yes' : 'No' %></td>
+      </tr>
+      <tr>
+        <td>Security</td>
+        <td>
+          <ul>
+            <% if(a.security) { %>
+              <% if(a.security.data_encryption) { %><li>Data Encryption</li><% } %>
+              <% (a.security.privacy_compliance || []).forEach(item => { %><li><%= item %></li><% }) %>
+              <% if(a.security.data_retention) { %><li>Data Retention: <%= a.security.data_retention %></li><% } %>
+            <% } %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% if(b.security) { %>
+              <% if(b.security.data_encryption) { %><li>Data Encryption</li><% } %>
+              <% (b.security.privacy_compliance || []).forEach(item => { %><li><%= item %></li><% }) %>
+              <% if(b.security.data_retention) { %><li>Data Retention: <%= b.security.data_retention %></li><% } %>
+            <% } %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Support Channels</td>
+        <td>
+          <ul>
+            <% (a.support?.channels || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.support?.channels || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Community Size</td>
+        <td><%= a.community_size || 'N/A' %></td>
+        <td><%= b.community_size || 'N/A' %></td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>
+          <% if(a.performance) { %>
+            Response Time: <%= a.performance.response_time || 'N/A' %><br/>
+            Uptime: <%= a.performance.uptime || 'N/A' %>
+          <% } else { %>
+            N/A
+          <% } %>
+        </td>
+        <td>
+          <% if(b.performance) { %>
+            Response Time: <%= b.performance.response_time || 'N/A' %><br/>
+            Uptime: <%= b.performance.uptime || 'N/A' %>
+          <% } else { %>
+            N/A
+          <% } %>
+        </td>
+      </tr>
+      <tr>
+        <td>Use Cases</td>
+        <td>
+          <ul>
+            <% (a.use_cases || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.use_cases || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Limitations</td>
+        <td>
+          <ul>
+            <% (a.limitations || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.limitations || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Pros</td>
+        <td>
+          <ul>
+            <% (a.pros_cons?.pros || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.pros_cons?.pros || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Cons</td>
+        <td>
+          <ul>
+            <% (a.pros_cons?.cons || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.pros_cons?.cons || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>External Reviews</td>
+        <td>
+          <ul>
+            <% (a.external_reviews || []).forEach(review => { %>
+              <li><a href="<%= review.url %>" target="_blank" rel="noopener"><%= review.title %></a></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.external_reviews || []).forEach(review => { %>
+              <li><a href="<%= review.url %>" target="_blank" rel="noopener"><%= review.title %></a></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Competitors</td>
+        <td>
+          <ul>
+            <% (a.competitors || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <% (b.competitors || []).forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Affiliate Link</td>
+
+
+        <td>    <form action="/out/<%= a.name.toLowerCase() %>" method="get" target="_blank">
+                <button type="submit" class="try-button">Try <%= a.name %></button>
+                </form>
+        </td>
+        <td>
+                <form action="/out/<%= b.name.toLowerCase() %>" method="get" target="_blank">
+                <button type="submit" class="try-button">Try <%= b.name %></button>
+                </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    // Dark mode toggle persistence with localStorage
+    const toggleBtn = document.getElementById('toggleDark');
+    const body = document.body;
+
+    function setDarkMode(enabled) {
+      if(enabled) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const enabled = body.classList.contains('dark-mode');
+      setDarkMode(!enabled);
+    });
+
+    // On page load, apply saved mode
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      setDarkMode(true);
+    }
+  </script>
 </body>
 </html>

@@ -2,11 +2,21 @@ body {
   font-family: sans-serif;
   padding: 20px;
   background: #f9f9f9;
+  color: #222;
 }
+
+/* Dark mode */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+/* Common compare page styles */
 .compare {
   display: flex;
   gap: 30px;
 }
+
 .card {
   background: white;
   padding: 20px;
@@ -14,18 +24,33 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   flex: 1;
 }
+
+body.dark-mode .card {
+  background: #1e1e1e;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
 .card h2 {
   margin-top: 0;
 }
+
 .card a {
   display: inline-block;
   margin-top: 10px;
   color: white;
   background: #007acc;
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 5px;
   text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
+
+.card a:hover {
+  background-color: #005f99;
+}
+
 .back-button {
   display: inline-block;
   margin: 20px 0;
@@ -40,4 +65,73 @@ body {
 
 .back-button:hover {
   background: #005f99;
+}
+
+/* Table styles */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  background-color: transparent; /* no blue bg */
+  font-weight: bold;
+  color: #222;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark-mode .compare-table thead th {
+  color: #eee;
+  border-bottom: 1px solid #444;
+}
+
+.compare-table tbody td:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+body.dark-mode .compare-table tbody td:first-child {
+  color: #eee;
+}
+
+.compare-table tbody tr:nth-child(even) td {
+  background-color: #fafafa; /* light zebra stripes */
+}
+
+body.dark-mode .compare-table tbody tr:nth-child(even) td {
+  background-color: #222;
+}
+
+.compare-table tbody tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+body.dark-mode .compare-table tbody tr:nth-child(odd) td {
+  background-color: #1a1a1a;
+}
+
+.try-button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.try-button:hover {
+  background-color: #005f99;
 }

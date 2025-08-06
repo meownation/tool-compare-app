@@ -2,48 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Compare AI Tools</title>
+  <link rel="stylesheet" href="/style.css" />
   <style>
     body {
-      font-family: sans-serif;
       max-width: 600px;
       margin: 50px auto;
       text-align: center;
+      padding: 20px;
+      font-family: sans-serif;
+      background: #f9f9f9;
+      color: #222;
     }
-    select, button {
+
+    body.dark-mode {
+      background: #121212;
+      color: #eee;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+
+    select {
+      width: 100%;
+      max-width: 100%;
       padding: 10px;
-      margin: 10px;
       font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    body.dark-mode select {
+      background: #1a1a1a;
+      color: #eee;
+      border-color: #555;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      background: #007acc;
+      color: white;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    button:hover {
+      background: #005f99;
+    }
+
+    /* Dark mode toggle button */
+    .toggle-dark {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #007acc;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      z-index: 1000;
+    }
+    .toggle-dark:hover {
+      background: #005f99;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-dark" id="toggleDark">Toggle Dark Mode</button>
+
   <h1>Compare AI Tools</h1>
+
   <form id="compare-form" method="GET" action="/compare">
-    <label>
-      Tool 1:
-      <select name="tool1" id="tool1" required>
-        <option value="">-- Select Tool 1 --</option>
-        <% for (const key in tools) { %>
-          <option value="<%= key %>"><%= tools[key].name %></option>
-        <% } %>
-      </select>
-    </label>
+    <label for="tool1">Tool 1:</label>
+    <select name="tool1" id="tool1" required>
+      <option value="">-- Select Tool 1 --</option>
+      <% for (const key in tools) { %>
+        <option value="<%= key %>"><%= tools[key].name %></option>
+      <% } %>
+    </select>
 
-    <br />
-
-    <label>
-      Tool 2:
-      <select name="tool2" id="tool2" required>
-        <option value="">-- Select Tool 2 --</option>
-        <% for (const key in tools) { %>
-          <option value="<%= key %>"><%= tools[key].name %></option>
-        <% } %>
-      </select>
-    </label>
-
-    <br />
+    <label for="tool2">Tool 2:</label>
+    <select name="tool2" id="tool2" required>
+      <option value="">-- Select Tool 2 --</option>
+      <% for (const key in tools) { %>
+        <option value="<%= key %>"><%= tools[key].name %></option>
+      <% } %>
+    </select>
 
     <button type="submit">Compare</button>
   </form>
@@ -59,6 +118,30 @@
         alert("Please select two different tools.");
       }
     });
+
+    // Dark mode toggle persistence with localStorage
+    const toggleBtn = document.getElementById('toggleDark');
+    const body = document.body;
+
+    function setDarkMode(enabled) {
+      if(enabled) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const enabled = body.classList.contains('dark-mode');
+      setDarkMode(!enabled);
+    });
+
+    // On page load, apply saved mode
+    if(localStorage.getItem('darkMode') === 'enabled') {
+      setDarkMode(true);
+    }
   </script>
 </body>
 </html>
