@@ -18,8 +18,10 @@
       <ul>
         <% a.features.forEach(f => { %><li><%= f %></li><% }) %>
       </ul>
-      <p>Price: <%= a.pricing %></p>
-      <a href="/out/<%= a.name.toLowerCase() %>" target="_blank">Try <%= a.name %></a>
+      <p><strong>Price:</strong> <%= a.pricing %></p>
+      <form action="/out/<%= a.name.toLowerCase() %>" method="get" target="_blank">
+        <button type="submit">Try <%= a.name %></button>
+      </form>
     </div>
     <div class="card">
       <h2><%= b.name %></h2>
@@ -27,8 +29,10 @@
       <ul>
         <% b.features.forEach(f => { %><li><%= f %></li><% }) %>
       </ul>
-      <p>Price: <%= b.pricing %></p>
-      <a href="/out/<%= b.name.toLowerCase() %>" target="_blank">Try <%= b.name %></a>
+      <p><strong>Price:</strong> <%= b.pricing %></p>
+      <form action="/out/<%= b.name.toLowerCase() %>" method="get" target="_blank">
+        <button type="submit">Try <%= b.name %></button>
+      </form>
     </div>
   </div>
 </body>

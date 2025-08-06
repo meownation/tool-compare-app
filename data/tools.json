@@ -2,78 +2,578 @@
   "chatgpt": {
     "name": "ChatGPT",
     "description": "OpenAI's conversational AI assistant.",
-    "features": ["GPT-4", "Chat History", "Web Access"],
-    "pricing": "Free tier + $20/mo for GPT-4",
-    "affiliate": "https://openai.com"
+    "founder": "OpenAI",
+    "launch_year": 2022,
+    "target_audience": ["Businesses", "Developers", "Content Creators", "Educators"],
+    "features": ["GPT-4", "Chat History", "Web Access", "Multimodal Capabilities (via GPT-4 Turbo)"],
+    "pricing": {
+      "free_tier": "Unlimited access to GPT-3.5",
+      "paid_tier": "$20/month for GPT-4 access",
+      "enterprise": "Custom pricing available via API"
+    },
+    "affiliate": "https://openai.com",
+    "platforms": ["Web", "iOS", "Android", "API"],
+    "integrations": ["Slack", "Microsoft Teams", "Zapier", "VS Code", "Notion"],
+    "api": {
+      "availability": true,
+      "rate_limits": "Varies by subscription tier, e.g., 40k tokens/min",
+      "documentation": "https://platform.openai.com/docs"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "User data retained per OpenAI policy, opt-out available"
+    },
+    "support": {
+      "channels": ["Email", "Community Forum", "Documentation"],
+      "quality": "Extensive official docs, active community"
+    },
+    "community_size": "Millions of users worldwide",
+    "performance": {
+      "response_time": "Typically <2 seconds for queries",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "Generate marketing copy and social media posts",
+      "Answer customer service queries",
+      "Write and debug code",
+      "Draft emails and documents",
+      "Provide tutoring and language learning"
+    ],
+    "limitations": [
+      "Can produce plausible but incorrect info",
+      "Limited knowledge after 2021 (unless browsing enabled)",
+      "Subscription required for GPT-4"
+    ],
+    "pros_cons": {
+      "pros": ["Highly versatile", "Strong language understanding", "Large ecosystem"],
+      "cons": ["Occasional hallucinations", "Subscription cost for GPT-4"]
+    },
+    "external_reviews": [
+      {
+        "title": "TechCrunch ChatGPT Review",
+        "url": "https://techcrunch.com/2023/03/15/chatgpt-review/"
+      }
+    ],
+    "competitors": ["Claude", "Gemini", "Bard"]
   },
+
   "claude": {
     "name": "Claude",
     "description": "Anthropic's AI assistant, good for long context.",
-    "features": ["100k context", "Fast", "Secure"],
-    "pricing": "Free + Pro $20/mo",
-    "affiliate": "https://www.anthropic.com"
+    "founder": "Anthropic",
+    "launch_year": 2023,
+    "target_audience": ["Researchers", "Enterprises", "Developers"],
+    "features": ["100k token context window", "Fast", "Strong safety mitigations", "Privacy-focused"],
+    "pricing": {
+      "free_tier": "Limited usage",
+      "paid_tier": "Pro $20/month",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://www.anthropic.com",
+    "platforms": ["Web", "API"],
+    "integrations": ["Slack", "Google Docs"],
+    "api": {
+      "availability": true,
+      "rate_limits": "Based on plan, typically 20k tokens/min",
+      "documentation": "https://www.anthropic.com/docs"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "HIPAA"],
+      "data_retention": "Minimal, customer controlled"
+    },
+    "support": {
+      "channels": ["Email", "Documentation"],
+      "quality": "Good official docs, smaller community"
+    },
+    "community_size": "Growing developer base",
+    "performance": {
+      "response_time": "1-2 seconds",
+      "uptime": "99.8%"
+    },
+    "use_cases": [
+      "Long-form content generation",
+      "Research assistance",
+      "Secure enterprise communication",
+      "Chatbots with extended context"
+    ],
+    "limitations": [
+      "Smaller third-party integration ecosystem",
+      "Limited public usage compared to ChatGPT"
+    ],
+    "pros_cons": {
+      "pros": ["Handles long context exceptionally well", "Strong ethical guardrails"],
+      "cons": ["Less popular than ChatGPT", "Fewer integrations"]
+    },
+    "external_reviews": [
+      {
+        "title": "VentureBeat Claude 2 Review",
+        "url": "https://venturebeat.com/ai/claude-2-review/"
+      }
+    ],
+    "competitors": ["ChatGPT", "Gemini", "Bard"]
   },
+
   "gemini": {
     "name": "Gemini",
     "description": "Google's AI for search and productivity tasks.",
-    "features": ["Bard", "Multimodal", "Google Docs Integration"],
-    "pricing": "Free + Gemini Advanced in Google One plans",
-    "affiliate": "https://gemini.google.com"
+    "founder": "Google DeepMind",
+    "launch_year": 2024,
+    "target_audience": ["General users", "Google Workspace customers", "Developers"],
+    "features": ["Bard integration", "Multimodal input", "Google Docs & Sheets integration", "Search enhancement"],
+    "pricing": {
+      "free_tier": "Standard Google account users",
+      "paid_tier": "Gemini Advanced via Google One plans",
+      "enterprise": "Part of Google Workspace enterprise pricing"
+    },
+    "affiliate": "https://gemini.google.com",
+    "platforms": ["Web", "Android", "API (limited)"],
+    "integrations": ["Google Workspace", "Google Search", "Google Assistant"],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR", "CCPA"],
+      "data_retention": "According to Google policies"
+    },
+    "support": {
+      "channels": ["Google Support", "Documentation"],
+      "quality": "Extensive, enterprise-grade"
+    },
+    "community_size": "Massive global user base",
+    "performance": {
+      "response_time": "Instant to a few seconds",
+      "uptime": "99.99%"
+    },
+    "use_cases": [
+      "Enhanced search experience",
+      "Productivity boost in Google Docs & Sheets",
+      "Multimodal queries and answers",
+      "General conversational AI"
+    ],
+    "limitations": [
+      "API not publicly available",
+      "Tightly coupled to Google ecosystem"
+    ],
+    "pros_cons": {
+      "pros": ["Seamless Google integration", "Strong multimodal capabilities"],
+      "cons": ["Limited API access", "Google account required"]
+    },
+    "external_reviews": [
+      {
+        "title": "The Verge Gemini Overview",
+        "url": "https://www.theverge.com/2024/4/20/google-gemini-ai"
+      }
+    ],
+    "competitors": ["ChatGPT", "Claude", "Bard"]
   },
+
   "perplexity": {
     "name": "Perplexity",
     "description": "AI-powered search engine with citations.",
-    "features": ["Real-time Search", "Sources", "Follow-up Questions"],
-    "pricing": "Free + Pro $20/mo",
-    "affiliate": "https://www.perplexity.ai"
+    "founder": "Perplexity AI",
+    "launch_year": 2022,
+    "target_audience": ["Researchers", "Students", "General users"],
+    "features": ["Real-time web search", "Citations", "Follow-up questions"],
+    "pricing": {
+      "free_tier": "Unlimited basic usage",
+      "paid_tier": "Pro $20/month with enhanced features",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://www.perplexity.ai",
+    "platforms": ["Web", "Mobile Web"],
+    "integrations": [],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR"],
+      "data_retention": "Minimal user data stored"
+    },
+    "support": {
+      "channels": ["Email", "Documentation"],
+      "quality": "Basic support and docs"
+    },
+    "community_size": "Growing user base",
+    "performance": {
+      "response_time": "Seconds",
+      "uptime": "99.5%"
+    },
+    "use_cases": [
+      "Quick fact-checking",
+      "Research with source citations",
+      "Follow-up Q&A on search topics"
+    ],
+    "limitations": [
+      "No official API",
+      "Limited integrations",
+      "Dependent on real-time search quality"
+    ],
+    "pros_cons": {
+      "pros": ["Citations improve trust", "Easy to use interface"],
+      "cons": ["Limited to web search scope", "Not suitable for offline use"]
+    },
+    "external_reviews": [
+      {
+        "title": "TechRadar Perplexity AI Review",
+        "url": "https://www.techradar.com/reviews/perplexity-ai"
+      }
+    ],
+    "competitors": ["ChatGPT", "Bing AI", "Google Bard"]
   },
+
   "copilot": {
     "name": "GitHub Copilot",
     "description": "AI coding assistant developed by GitHub & OpenAI.",
-    "features": ["Code Autocomplete", "Docs Suggestions", "IDE Integration"],
-    "pricing": "$10/mo for individuals, $19/mo for businesses",
-    "affiliate": "https://github.com/features/copilot"
+    "founder": "GitHub & OpenAI",
+    "launch_year": 2021,
+    "target_audience": ["Developers", "Software engineers", "Students"],
+    "features": ["Code autocomplete", "Documentation suggestions", "IDE integration"],
+    "pricing": {
+      "individual": "$10/month",
+      "business": "$19/month per user",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://github.com/features/copilot",
+    "platforms": ["VS Code", "Neovim", "JetBrains IDEs", "Visual Studio"],
+    "integrations": ["GitHub", "IDE plugins"],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR"],
+      "data_retention": "Code snippets retained for model improvement unless opted out"
+    },
+    "support": {
+      "channels": ["Email", "GitHub Community"],
+      "quality": "Strong developer support, active community"
+    },
+    "community_size": "Millions of developers",
+    "performance": {
+      "response_time": "Milliseconds to seconds",
+      "uptime": "99.9%"
+    },
+    "use_cases": [
+      "Code completion and suggestions",
+      "Learning new programming languages",
+      "Generating boilerplate code",
+      "Refactoring assistance"
+    ],
+    "limitations": [
+      "May produce incorrect or insecure code",
+      "Requires internet connection",
+      "Subscription required"
+    ],
+    "pros_cons": {
+      "pros": ["Boosts developer productivity", "Supports many languages"],
+      "cons": ["Sometimes inaccurate", "Subscription cost"]
+    },
+    "external_reviews": [
+      {
+        "title": "The Verge GitHub Copilot Review",
+        "url": "https://www.theverge.com/2022/6/21/23171710/github-copilot-ai-coding-review"
+      }
+    ],
+    "competitors": ["TabNine", "Amazon CodeWhisperer", "Kite"]
   },
+
   "reka": {
     "name": "Reka AI",
     "description": "New research lab offering advanced language models.",
-    "features": ["Multimodal", "Open Weights", "High Accuracy"],
-    "pricing": "Free trial available",
-    "affiliate": "https://reka.ai"
+    "founder": "Reka Research",
+    "launch_year": 2024,
+    "target_audience": ["Researchers", "Developers", "AI Enthusiasts"],
+    "features": ["Multimodal", "Open weights", "High accuracy", "Open research"],
+    "pricing": {
+      "free_trial": "Available",
+      "subscription": "TBD"
+    },
+    "affiliate": "https://reka.ai",
+    "platforms": ["Web", "API"],
+    "integrations": [],
+    "api": {
+      "availability": true,
+      "rate_limits": "Not publicly specified",
+      "documentation": "https://reka.ai/docs"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR"],
+      "data_retention": "Compliant with regulations"
+    },
+    "support": {
+      "channels": ["Email", "Documentation"],
+      "quality": "Early stage, evolving"
+    },
+    "community_size": "Small but growing",
+    "performance": {
+      "response_time": "Varies",
+      "uptime": "Not publicly disclosed"
+    },
+    "use_cases": [
+      "Research and experimentation",
+      "Multimodal AI projects",
+      "Open-weight model usage"
+    ],
+    "limitations": [
+      "Limited production readiness",
+      "Smaller ecosystem"
+    ],
+    "pros_cons": {
+      "pros": ["Open research focus", "High accuracy in tests"],
+      "cons": ["Early stage", "Limited integrations"]
+    },
+    "external_reviews": [],
+    "competitors": ["Mistral", "LLaMA", "OpenAI"]
   },
+
   "mistral": {
     "name": "Mistral",
     "description": "Open-weight language models known for performance.",
-    "features": ["Fast", "Open Source", "Streaming"],
-    "pricing": "Free",
-    "affiliate": "https://mistral.ai"
+    "founder": "Mistral AI",
+    "launch_year": 2023,
+    "target_audience": ["Developers", "Researchers", "Startups"],
+    "features": ["Fast", "Open source", "Streaming capability"],
+    "pricing": {
+      "free": "Completely free to use"
+    },
+    "affiliate": "https://mistral.ai",
+    "platforms": ["API", "On-premise"],
+    "integrations": [],
+    "api": {
+      "availability": true,
+      "rate_limits": "Depends on deployment",
+      "documentation": "https://docs.mistral.ai"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR"],
+      "data_retention": "User data not retained by default"
+    },
+    "support": {
+      "channels": ["Email", "Community"],
+      "quality": "Community-driven support"
+    },
+    "community_size": "Growing open-source user base",
+    "performance": {
+      "response_time": "Very fast",
+      "uptime": "Depends on deployment"
+    },
+    "use_cases": [
+      "Building custom AI solutions",
+      "Research on language models",
+      "Streaming text generation"
+    ],
+    "limitations": [
+      "Requires technical expertise",
+      "No official hosted API"
+    ],
+    "pros_cons": {
+      "pros": ["Open source and fast", "Flexible deployment"],
+      "cons": ["Technical barrier", "No managed service"]
+    },
+    "external_reviews": [],
+    "competitors": ["Reka AI", "LLaMA"]
   },
+
   "llama": {
     "name": "LLaMA",
     "description": "Meta’s open large language model series.",
-    "features": ["Open Weight", "High Efficiency", "Long Context"],
-    "pricing": "Free (research license)",
-    "affiliate": "https://ai.meta.com/llama"
+    "founder": "Meta AI",
+    "launch_year": 2023,
+    "target_audience": ["Researchers", "Developers", "Enterprise AI teams"],
+    "features": ["Open weight", "High efficiency", "Long context support"],
+    "pricing": {
+      "free": "Research license only"
+    },
+    "affiliate": "https://ai.meta.com/llama",
+    "platforms": ["On-premise", "Cloud deployments"],
+    "integrations": [],
+    "api": {
+      "availability": false,
+      "documentation": "https://ai.meta.com/llama/docs"
+    },
+    "security": {
+      "data_encryption": "Depends on deployment",
+      "privacy_compliance": "Depends on deployment",
+      "data_retention": "Depends on deployment"
+    },
+    "support": {
+      "channels": ["Meta research community"],
+      "quality": "Research-focused"
+    },
+    "community_size": "Large research community",
+    "performance": {
+      "response_time": "Depends on deployment",
+      "uptime": "Depends on deployment"
+    },
+    "use_cases": [
+      "Research and development",
+      "Enterprise AI customization",
+      "Large context language tasks"
+    ],
+    "limitations": [
+      "No hosted API",
+      "License restricted to research"
+    ],
+    "pros_cons": {
+      "pros": ["Open weights", "Efficient and powerful"],
+      "cons": ["Limited commercial use", "Requires expertise"]
+    },
+    "external_reviews": [],
+    "competitors": ["Mistral", "OpenAI GPT models"]
   },
+
   "pi": {
     "name": "Pi AI",
     "description": "Personal AI chatbot with emotional intelligence.",
-    "features": ["Voice Chat", "Empathetic Responses", "Always-On"],
-    "pricing": "Free",
-    "affiliate": "https://heypi.com"
+    "founder": "Pi Labs",
+    "launch_year": 2023,
+    "target_audience": ["Casual users", "Mental wellness seekers"],
+    "features": ["Voice chat", "Empathetic responses", "Always-on"],
+    "pricing": {
+      "free": "Fully free"
+    },
+    "affiliate": "https://heypi.com",
+    "platforms": ["Mobile (iOS, Android)"],
+    "integrations": [],
+    "api": {
+      "availability": false,
+      "documentation": "N/A"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["GDPR"],
+      "data_retention": "Minimal"
+    },
+    "support": {
+      "channels": ["App support"],
+      "quality": "Basic support"
+    },
+    "community_size": "Growing casual user base",
+    "performance": {
+      "response_time": "Real-time voice responses",
+      "uptime": "99%"
+    },
+    "use_cases": [
+      "Companion chatbot",
+      "Mental wellness support",
+      "Casual conversation"
+    ],
+    "limitations": [
+      "Not designed for complex tasks",
+      "Mobile-only"
+    ],
+    "pros_cons": {
+      "pros": ["Empathetic AI", "Free and accessible"],
+      "cons": ["Limited scope", "No API"]
+    },
+    "external_reviews": [],
+    "competitors": ["Replika", "Woebot"]
   },
+
   "groq": {
     "name": "Groq Chat",
     "description": "Extremely fast inference for open models like Mixtral.",
-    "features": ["Ultra Fast", "Open Models", "Live Demos"],
-    "pricing": "Free",
-    "affiliate": "https://groq.com"
+    "founder": "Groq Inc.",
+    "launch_year": 2024,
+    "target_audience": ["AI developers", "Enterprises with inference needs"],
+    "features": ["Ultra fast inference", "Supports open models", "Live demos"],
+    "pricing": {
+      "free": "Demos available",
+      "enterprise": "Custom pricing"
+    },
+    "affiliate": "https://groq.com",
+    "platforms": ["Cloud", "Edge hardware"],
+    "integrations": [],
+    "api": {
+      "availability": true,
+      "rate_limits": "Depends on contract",
+      "documentation": "https://docs.groq.com"
+    },
+    "security": {
+      "data_encryption": true,
+      "privacy_compliance": ["Enterprise grade"],
+      "data_retention": "Enterprise controlled"
+    },
+    "support": {
+      "channels": ["Enterprise support"],
+      "quality": "High-end, SLA backed"
+    },
+    "community_size": "Enterprise users",
+    "performance": {
+      "response_time": "Sub-millisecond to milliseconds",
+      "uptime": "99.99%"
+    },
+    "use_cases": [
+      "Real-time AI inference",
+      "Edge AI applications",
+      "High throughput workloads"
+    ],
+    "limitations": [
+      "Not for casual or small-scale use",
+      "Requires specialized hardware"
+    ],
+    "pros_cons": {
+      "pros": ["Unmatched speed", "Supports open models"],
+      "cons": ["High cost", "Hardware requirements"]
+    },
+    "external_reviews": [],
+    "competitors": ["NVIDIA Triton", "AWS Inferentia"]
   },
+
   "jan": {
     "name": "Jan",
     "description": "Open-source, locally run AI assistant.",
-    "features": ["Privacy Focused", "Open Source", "Offline"],
-    "pricing": "Free",
-    "affiliate": "https://github.com/janhq/jan"
+    "founder": "JanHQ",
+    "launch_year": 2023,
+    "target_audience": ["Privacy-conscious users", "Developers", "Researchers"],
+    "features": ["Privacy focused", "Open source", "Offline capable"],
+    "pricing": {
+      "free": "Open source"
+    },
+    "affiliate": "https://github.com/janhq/jan",
+    "platforms": ["Local desktop", "Linux", "Windows"],
+    "integrations": [],
+    "api": {
+      "availability": false,
+      "documentation": "https://github.com/janhq/jan"
+    },
+    "security": {
+      "data_encryption": "User controlled",
+      "privacy_compliance": "Fully user controlled",
+      "data_retention": "None by default"
+    },
+    "support": {
+      "channels": ["GitHub Issues", "Community"],
+      "quality": "Community-supported"
+    },
+    "community_size": "Modest open-source community",
+    "performance": {
+      "response_time": "Depends on local hardware",
+      "uptime": "N/A (local install)"
+    },
+    "use_cases": [
+      "Private AI assistant",
+      "Offline AI tasks",
+      "Custom AI development"
+    ],
+    "limitations": [
+      "Requires technical knowledge to set up",
+      "No hosted service"
+    ],
+    "pros_cons": {
+      "pros": ["Full privacy", "Open source"],
+      "cons": ["Setup complexity", "No cloud features"]
+    },
+    "external_reviews": [],
+    "competitors": ["Mycroft AI", "Local LLM setups"]
   }
 }
