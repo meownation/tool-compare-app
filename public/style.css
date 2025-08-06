@@ -26,3 +26,18 @@ body {
   border-radius: 5px;
   text-decoration: none;
 }
+.back-button {
+  display: inline-block;
+  margin: 20px 0;
+  color: white;
+  background: #007acc;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: #005f99;
+}
