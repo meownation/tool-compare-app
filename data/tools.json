@@ -402,7 +402,7 @@
     },
     "security": {
       "data_encryption": "Depends on deployment",
-      "privacy_compliance": "Depends on deployment",
+      "privacy_compliance": ["Depends on deployment"],
       "data_retention": "Depends on deployment"
     },
     "support": {
@@ -548,7 +548,7 @@
     },
     "security": {
       "data_encryption": "User controlled",
-      "privacy_compliance": "Fully user controlled",
+      "privacy_compliance": ["Fully user controlled"],
       "data_retention": "None by default"
     },
     "support": {
