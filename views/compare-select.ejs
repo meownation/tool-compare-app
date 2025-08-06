@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compare AI Tools</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Compare AI Tools</h1>
+  <form id="compare-form" method="GET" action="/compare">
+    <label>
+      Tool 1:
+      <select name="tool1" id="tool1" required>
+        <option value="">-- Select Tool 1 --</option>
+        <% for (const key in tools) { %>
+          <option value="<%= key %>"><%= tools[key].name %></option>
+        <% } %>
+      </select>
+    </label>
+
+    <br />
+
+    <label>
+      Tool 2:
+      <select name="tool2" id="tool2" required>
+        <option value="">-- Select Tool 2 --</option>
+        <% for (const key in tools) { %>
+          <option value="<%= key %>"><%= tools[key].name %></option>
+        <% } %>
+      </select>
+    </label>
+
+    <br />
+
+    <button type="submit">Compare</button>
+  </form>
+
+  <script>
+    // Prevent comparing the same tool
+    const form = document.getElementById('compare-form');
+    form.addEventListener('submit', function(e) {
+      const tool1 = document.getElementById('tool1').value;
+      const tool2 = document.getElementById('tool2').value;
+      if (tool1 === tool2) {
+        e.preventDefault();
+        alert("Please select two different tools.");
+      }
+    });
+  </script>
+</body>
+</html>
