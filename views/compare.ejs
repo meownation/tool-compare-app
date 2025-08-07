@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><%= a.name %> vs <%= b.name %> – AI Tool Comparison</title>
-  <link rel="stylesheet" href="/style.css" />
-  <style>
-    /* Additional style for dark mode toggle button */
-    .toggle-dark {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #007acc;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: 600;
-      z-index: 1000;
-    }
-    .toggle-dark:hover {
-      background: #005f99;
-    }
-  </style>
-</head>
-<body>
-  <button class="toggle-dark" id="toggleDark">Toggle Dark Mode</button>
+<% title = `${a.name} vs ${b.name} – AI Tool Comparison` %>
+<button class="toggle-dark" id="toggleDark">Toggle Dark Mode</button>
 
   <a href="/compare" class="back-button">← Back to Tool Selection</a>
 
@@ -335,30 +308,29 @@
     </tbody>
   </table>
 
-  <script>
-    // Dark mode toggle persistence with localStorage
-    const toggleBtn = document.getElementById('toggleDark');
-    const body = document.body;
+<!--  <script>-->
+<!--    // Dark mode toggle persistence with localStorage-->
+<!--    const toggleBtn = document.getElementById('toggleDark');-->
+<!--    const body = document.body;-->
 
-    function setDarkMode(enabled) {
-      if(enabled) {
-        body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-      } else {
-        body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', 'disabled');
-      }
-    }
+<!--    function setDarkMode(enabled) {-->
+<!--      if(enabled) {-->
+<!--        body.classList.add('dark-mode');-->
+<!--        localStorage.setItem('darkMode', 'enabled');-->
+<!--      } else {-->
+<!--        body.classList.remove('dark-mode');-->
+<!--        localStorage.setItem('darkMode', 'disabled');-->
+<!--      }-->
+<!--    }-->
 
-    toggleBtn.addEventListener('click', () => {
-      const enabled = body.classList.contains('dark-mode');
-      setDarkMode(!enabled);
-    });
+<!--    toggleBtn.addEventListener('click', () => {-->
+<!--      const enabled = body.classList.contains('dark-mode');-->
+<!--      setDarkMode(!enabled);-->
+<!--    });-->
 
-    // On page load, apply saved mode
-    if(localStorage.getItem('darkMode') === 'enabled') {
-      setDarkMode(true);
-    }
-  </script>
-</body>
-</html>
+<!--    // On page load, apply saved mode-->
+<!--    if(localStorage.getItem('darkMode') === 'enabled') {-->
+<!--      setDarkMode(true);-->
+<!--    }-->
+<!--  </script>-->
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= title || "AI Tool Comparison" %></title>
+
+    <!-- Common styles -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Dark mode toggle style -->
+    <style>
+        .toggle-dark {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            z-index: 1000;
+        }
+        .toggle-dark:hover {
+            background: #005f99;
+        }
+    </style>
+</head>
+
+<body class="<%= layoutClass || '' %>">
+<%- body %>
+
+<script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('toggleDark');
+    const body = document.body;
+    function setDarkMode(enabled) {
+        if(enabled) {
+            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    }
+    if(toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const enabled = body.classList.contains('dark-mode');
+            setDarkMode(!enabled);
+        });
+        if(localStorage.getItem('darkMode') === 'enabled') {
+            setDarkMode(true);
+        }
+    }
+</script>
+</body>
+</html>

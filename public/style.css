@@ -1,4 +1,4 @@
-body {
+.compare-page {
   font-family: sans-serif;
   padding: 20px;
   background: #f9f9f9;
@@ -6,18 +6,18 @@ body {
 }
 
 /* Dark mode */
-body.dark-mode {
+.compare-page.dark-mode {
   background: #121212;
   color: #eee;
 }
 
 /* Common compare page styles */
-.compare {
+.compare-page .compare {
   display: flex;
   gap: 30px;
 }
 
-.card {
+.compare-page .card {
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -25,16 +25,16 @@ body.dark-mode {
   flex: 1;
 }
 
-body.dark-mode .card {
+.compare-page.dark-mode .card {
   background: #1e1e1e;
   box-shadow: 0 2px 8px rgba(255,255,255,0.1);
 }
 
-.card h2 {
+.compare-page .card h2 {
   margin-top: 0;
 }
 
-.card a {
+.compare-page .card a {
   display: inline-block;
   margin-top: 10px;
   color: white;
@@ -47,11 +47,11 @@ body.dark-mode .card {
   transition: background-color 0.3s ease;
 }
 
-.card a:hover {
+.compare-page .card a:hover {
   background-color: #005f99;
 }
 
-.back-button {
+.compare-page .back-button {
   display: inline-block;
   margin: 20px 0;
   color: white;
@@ -63,26 +63,26 @@ body.dark-mode .card {
   font-weight: 600;
 }
 
-.back-button:hover {
+.compare-page .back-button:hover {
   background: #005f99;
 }
 
 /* Table styles */
-.compare-table {
+.compare-page .compare-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
   font-family: sans-serif;
 }
 
-.compare-table th,
-.compare-table td {
+.compare-page .compare-table th,
+.compare-page .compare-table td {
   padding: 12px 15px;
   border-bottom: 1px solid #ddd;
   vertical-align: top;
 }
 
-.compare-table thead th {
+.compare-page .compare-table thead th {
   background-color: transparent; /* no blue bg */
   font-weight: bold;
   color: #222;
@@ -90,17 +90,17 @@ body.dark-mode .card {
   border-bottom: 1px solid #ccc;
 }
 
-body.dark-mode .compare-table thead th {
+.compare-page.dark-mode .compare-table thead th {
   color: #eee;
   border-bottom: 1px solid #444;
 }
 
-.compare-table tbody td:first-child {
+.compare-page .compare-table tbody td:first-child {
   font-weight: 600;
   color: #333;
 }
 
-body.dark-mode .compare-table tbody td:first-child {
+.compare-page.dark-mode .compare-table tbody td:first-child {
   color: #eee;
 }
 
@@ -108,19 +108,19 @@ body.dark-mode .compare-table tbody td:first-child {
   background-color: #fafafa; /* light zebra stripes */
 }
 
-body.dark-mode .compare-table tbody tr:nth-child(even) td {
+.compare-page.dark-mode .compare-table tbody tr:nth-child(even) td {
   background-color: #222;
 }
 
-.compare-table tbody tr:nth-child(odd) td {
+.compare-page .compare-table tbody tr:nth-child(odd) td {
   background-color: #fff;
 }
 
-body.dark-mode .compare-table tbody tr:nth-child(odd) td {
+.compare-page.dark-mode .compare-table tbody tr:nth-child(odd) td {
   background-color: #1a1a1a;
 }
 
-.try-button {
+.compare-page .try-button {
   background-color: #007acc;
   color: white;
   border: none;
@@ -132,6 +132,82 @@ body.dark-mode .compare-table tbody tr:nth-child(odd) td {
   transition: background-color 0.3s ease;
 }
 
-.try-button:hover {
+.compare-page .try-button:hover {
   background-color: #005f99;
+}
+
+.compare-select-page {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    background: #f9f9f9;
+    color: #222;
+}
+
+.compare-select-page.dark-mode {
+    background: #121212;
+    color: #eee;
+}
+
+.compare-select-page .label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.compare-select-page .compare-select {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* add some space below */
+}
+
+.compare-select-page.dark-mode .compare-select {
+    background: #1a1a1a;
+    color: #eee;
+    border-color: #555;
+}
+
+.compare-select-page .compare-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background: #007acc;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    max-width: 320px;
+}
+
+.compare-select-page .compare-button:hover {
+    background: #005f99;
+}
+
+/* Dark mode toggle button */
+.compare-select-page .toggle-dark {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 1000;
+}
+.compare-select-page .toggle-dark:hover {
+    background: #005f99;
 }
