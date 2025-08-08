@@ -59,7 +59,9 @@ router.get("/:tools", (req, res) => {
       url,
       image,
       a: tools[tool1],
-      b: tools[tool2]
+      b: tools[tool2],
+      aid: tool1,
+      bid: tool2
   });
 });
 
