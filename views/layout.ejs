@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title><%= title || "AI Tool Comparison" %></title>
 
+    <%
+    const metaDescription = description || "Compare top AI tools with in-depth features, pricing, and reviews.";
+    const metaUrl = url || "https://tool-compare-app.onrender.com" + (typeof req !== 'undefined' ? (req.originalUrl || "/") : "/");
+    const metaImage = image || "https://tool-compare-app.onrender.com/default-image.png";
+    %>
+
+    <!-- Standard SEO -->
+    <meta name="description" content="<%= metaDescription %>" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="<%= metaUrl %>" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<%= title || 'AI Tool Comparison' %>" />
+    <meta property="og:description" content="<%= metaDescription %>" />
+    <meta property="og:url" content="<%= metaUrl %>" />
+    <meta property="og:image" content="<%= metaImage %>" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%= title || 'AI Tool Comparison' %>" />
+    <meta name="twitter:description" content="<%= metaDescription %>" />
+    <meta name="twitter:image" content="<%= metaImage %>" />
+
     <!-- Common styles -->
     <link rel="stylesheet"
           href="/style.css"/>

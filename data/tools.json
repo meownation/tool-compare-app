@@ -2,6 +2,8 @@
   "chatgpt": {
     "name": "ChatGPT",
     "description": "OpenAI's conversational AI assistant.",
+    "seo_description": "Compare ChatGPT with other AI tools: OpenAI's flagship conversational AI with GPT-4 capabilities, real-time web access, and multimodal features for businesses, developers, and creators.",
+    "image": "https://cdn.simpleicons.org/openai",
     "founder": "OpenAI",
     "launch_year": 2022,
     "target_audience": ["Businesses", "Developers", "Content Creators", "Educators"],
@@ -61,6 +63,8 @@
   "claude": {
     "name": "Claude",
     "description": "Anthropic's AI assistant, good for long context.",
+    "seo_description": "Claude by Anthropic offers safe, reliable AI with long context windows and strong ethical guardrails, great for enterprises and researchers.",
+    "image": "https://tool-compare-app.onrender.com/images/claude.png",
     "founder": "Anthropic",
     "launch_year": 2023,
     "target_audience": ["Researchers", "Enterprises", "Developers"],
@@ -118,6 +122,8 @@
   "gemini": {
     "name": "Gemini",
     "description": "Google's AI for search and productivity tasks.",
+    "seo_description": "Google Gemini AI offers integrated search, multimodal input, and productivity enhancements for Google Workspace users and developers.",
+    "image": "https://tool-compare-app.onrender.com/images/gemini.png",
     "founder": "Google DeepMind",
     "launch_year": 2024,
     "target_audience": ["General users", "Google Workspace customers", "Developers"],
@@ -174,6 +180,8 @@
   "perplexity": {
     "name": "Perplexity",
     "description": "AI-powered search engine with citations.",
+    "seo_description": "Perplexity AI is a search assistant providing real-time answers with source citations, ideal for researchers and students.",
+    "image": "https://tool-compare-app.onrender.com/images/perplexity.png",
     "founder": "Perplexity AI",
     "launch_year": 2022,
     "target_audience": ["Researchers", "Students", "General users"],
@@ -230,6 +238,8 @@
   "copilot": {
     "name": "GitHub Copilot",
     "description": "AI coding assistant developed by GitHub & OpenAI.",
+    "seo_description": "GitHub Copilot offers AI-powered code completion and suggestions integrated directly into popular IDEs for developers.",
+    "image": "https://tool-compare-app.onrender.com/images/copilot.png",
     "founder": "GitHub & OpenAI",
     "launch_year": 2021,
     "target_audience": ["Developers", "Software engineers", "Students"],
@@ -287,6 +297,8 @@
   "reka": {
     "name": "Reka AI",
     "description": "New research lab offering advanced language models.",
+    "seo_description": "Reka AI provides open research and advanced multimodal language models, focusing on accuracy and open weights for developers and researchers.",
+    "image": "https://tool-compare-app.onrender.com/images/reka.png",
     "founder": "Reka Research",
     "launch_year": 2024,
     "target_audience": ["Researchers", "Developers", "AI Enthusiasts"],
@@ -337,6 +349,8 @@
   "mistral": {
     "name": "Mistral",
     "description": "Open-weight language models known for performance.",
+    "seo_description": "Mistral offers fast, open-source language models with streaming capabilities, aimed at developers and startups seeking flexibility.",
+    "image": "https://tool-compare-app.onrender.com/images/mistral.png",
     "founder": "Mistral AI",
     "launch_year": 2023,
     "target_audience": ["Developers", "Researchers", "Startups"],
@@ -386,6 +400,8 @@
   "llama": {
     "name": "LLaMA",
     "description": "Meta’s open large language model series.",
+    "seo_description": "Meta’s LLaMA is a series of open large language models designed for researchers and enterprises. It offers open weights, high efficiency, and long context support for advanced AI applications.",
+    "image": "https://tool-compare-app.onrender.com/images/llama.png",
     "founder": "Meta AI",
     "launch_year": 2023,
     "target_audience": ["Researchers", "Developers", "Enterprise AI teams"],
@@ -434,6 +450,8 @@
   "pi": {
     "name": "Pi AI",
     "description": "Personal AI chatbot with emotional intelligence.",
+    "seo_description": "Pi AI is a personal chatbot with emotional intelligence, offering empathetic voice chat and mental wellness support for casual users seeking an always-on AI companion.",
+    "image": "https://tool-compare-app.onrender.com/images/pi.png",
     "founder": "Pi Labs",
     "launch_year": 2023,
     "target_audience": ["Casual users", "Mental wellness seekers"],
@@ -482,6 +500,8 @@
   "groq": {
     "name": "Groq Chat",
     "description": "Extremely fast inference for open models like Mixtral.",
+    "seo_description": "Groq Chat delivers ultra-fast inference for open models like Mixtral, tailored for AI developers and enterprises needing real-time AI at edge hardware with high throughput.",
+    "image": "https://tool-compare-app.onrender.com/images/groq.png",
     "founder": "Groq Inc.",
     "launch_year": 2024,
     "target_audience": ["AI developers", "Enterprises with inference needs"],
@@ -532,6 +552,8 @@
   "jan": {
     "name": "Jan",
     "description": "Open-source, locally run AI assistant.",
+    "seo_description": "Jan AI is an open-source, privacy-focused AI assistant designed for offline use. Perfect for developers and privacy-conscious users seeking a local AI solution without cloud dependencies.",
+    "image": "https://tool-compare-app.onrender.com/images/jan.png",
     "founder": "JanHQ",
     "launch_year": 2023,
     "target_audience": ["Privacy-conscious users", "Developers", "Researchers"],
@@ -580,6 +602,8 @@
   "bard": {
     "name": "Google Bard",
     "description": "Google’s conversational AI based on LaMDA.",
+    "seo_description": "Google Bard provides conversational AI integrated with Google Search for real-time, accurate answers and creative assistance.",
+    "image": "https://tool-compare-app.onrender.com/images/bard.png",
     "founder": "Google",
     "launch_year": 2023,
     "target_audience": ["General users", "Students", "Developers"],
@@ -636,6 +660,8 @@
   "bing_ai": {
     "name": "Bing AI",
     "description": "Microsoft's AI-powered search assistant integrated with Bing.",
+    "seo_description": "Bing AI offers conversational search with up-to-date web results, chat, and image generation integrated into Microsoft Bing and Edge browser.",
+    "image": "https://tool-compare-app.onrender.com/images/bing_ai.png",
     "founder": "Microsoft",
     "launch_year": 2023,
     "target_audience": ["General users", "Students", "Businesses"],
@@ -692,6 +718,8 @@
   "huggingface_hub": {
     "name": "Hugging Face",
     "description": "Open AI community and model hub with hosted APIs.",
+    "seo_description": "Hugging Face Hub is a community-driven platform offering open access to pre-trained AI models, datasets, and tools for developers and researchers.",
+    "image": "https://tool-compare-app.onrender.com/images/huggingface_hub.png",
     "founder": "Hugging Face Inc.",
     "launch_year": 2016,
     "target_audience": ["Researchers", "Developers", "Data Scientists"],
@@ -749,6 +777,8 @@
   "ai21_labs": {
     "name": "AI21 Labs",
     "description": "AI models focused on natural language understanding.",
+    "seo_description": "AI21 Labs provides powerful language models like Jurassic-2 and writing assistants tailored for developers and enterprises.",
+    "image": "https://tool-compare-app.onrender.com/images/ai21_labs.png",
     "founder": "AI21 Labs",
     "launch_year": 2019,
     "target_audience": ["Developers", "Enterprises"],
